@@ -5,3 +5,16 @@
  */
 
 include_once 'gsb_feature_academic_calendar_ct.features.inc';
+
+const GSB_FEATURE_ACADEMIC_CALENDAR = '10556';
+
+/**
+ * Implements hook_form_FORM_ID_alter() for academic_calendar_event_node_form().
+ */
+function gsb_feature_academic_calendar_ct_form_academic_calendar_event_node_form_alter(&$form, &$form_state, $form_id) {
+  if (isset($form['field_event_category'])) {
+    $langcode = $form['field_event_category']['#language'];
+    $form['field_event_category'][$langcode]['#value'] = GSB_FEATURE_ACADEMIC_CALENDAR;
+    $form['field_event_category'][$langcode]['#type'] = 'hidden';
+  }
+}

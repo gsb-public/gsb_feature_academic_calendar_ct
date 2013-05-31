@@ -110,11 +110,11 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'hs_taxonomy',
+      'module' => 'options',
       'settings' => array(
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
-      'type' => 'taxonomy_hs',
+      'type' => 'options_select',
       'weight' => 48,
     ),
     'workbench_access_field' => 0,
