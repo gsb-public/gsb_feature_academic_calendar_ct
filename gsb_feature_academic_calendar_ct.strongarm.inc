@@ -13,22 +13,43 @@ function gsb_feature_academic_calendar_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_node_academic_calendar_event';
+  $strongarm->value = '1';
+  $export['auto_entitylabel_node_academic_calendar_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_pattern_node_academic_calendar_event';
+  $strongarm->value = '[node:field-program-single:name] - [node:field_academic_calendar_link]';
+  $export['auto_entitylabel_pattern_node_academic_calendar_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_php_node_academic_calendar_event';
+  $strongarm->value = 0;
+  $export['auto_entitylabel_php_node_academic_calendar_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__academic_calendar_event';
   $strongarm->value = array(
     'view_modes' => array(),
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '7',
         ),
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '6',
         ),
         'workbench_access' => array(
-          'weight' => '0',
+          'weight' => '5',
         ),
       ),
       'display' => array(),

@@ -10,6 +10,82 @@
 function gsb_feature_academic_calendar_ct_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-academic_calendar_event-field_academic_calendar_link'
+  $field_instances['node-academic_calendar_event-field_academic_calendar_link'] = array(
+    'bundle' => 'academic_calendar_event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'link_default',
+        'weight' => 5,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tiny' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_academic_calendar_link',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'rel_remove' => 'default',
+      'title' => 'required',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 'optional',
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'link_field',
+      'weight' => 1,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-academic_calendar_event-field_academic_quarter'
   $field_instances['node-academic_calendar_event-field_academic_quarter'] = array(
     'bundle' => 'academic_calendar_event',
@@ -60,7 +136,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 44,
+      'weight' => 2,
     ),
     'workbench_access_field' => 0,
   );
@@ -115,7 +191,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 48,
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
   );
@@ -187,7 +263,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 43,
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -231,7 +307,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_program_single',
     'label' => 'Program',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -242,7 +318,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 46,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -250,6 +326,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Date');
+  t('Description');
   t('Event Category');
   t('Program');
   t('Quarter');
