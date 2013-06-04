@@ -18,3 +18,18 @@ function gsb_feature_academic_calendar_ct_form_academic_calendar_event_node_form
     $form['field_event_category'][$langcode]['#type'] = 'hidden';
   }
 }
+
+/**
+ * Implements hook_date_popup_process_alter().
+ */
+function gsb_feature_academic_calendar_ct_date_popup_process_alter(&$element, &$form_state, $context) {
+  if ($form_state['build_info']['form_id'] != 'academic_calendar_event_node_form') {
+    return;
+  }
+
+  if (isset($element['#field']['field_name']) && $element['#field']['field_name'] == 'field_event_date') {
+    $element['time']['#value'] = '00:00';
+    $element['time']['#default_value'] = '00:00';
+    $element['time']['#type'] = 'hidden';
+  }
+}
