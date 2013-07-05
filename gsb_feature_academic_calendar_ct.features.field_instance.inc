@@ -321,8 +321,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-academic_calendar_event-field_program_single'
-  $field_instances['node-academic_calendar_event-field_program_single'] = array(
+  // Exported field_instance: 'node-academic_calendar_event-field_program_unlimited'
+  $field_instances['node-academic_calendar_event-field_program_unlimited'] = array(
     'bundle' => 'academic_calendar_event',
     'default_value' => NULL,
     'deleted' => 0,
@@ -335,7 +335,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
           'conditions' => array(),
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 7,
       ),
       'featured' => array(
         'label' => 'above',
@@ -354,11 +354,11 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
-      ),
+      ),      
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_program_single',
+    'field_name' => 'field_program_unlimited',
     'label' => 'Program',
     'required' => 1,
     'settings' => array(
@@ -371,7 +371,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 7,
     ),
     'workbench_access_field' => 0,
   );
