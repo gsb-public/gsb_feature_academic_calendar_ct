@@ -81,7 +81,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 1,
+      'weight' => 2,
     ),
     'workbench_access_field' => 0,
   );
@@ -136,7 +136,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -160,6 +160,12 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         ),
         'type' => 'list_default',
         'weight' => 6,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -189,7 +195,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -244,7 +250,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -316,7 +322,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 2,
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
   );
@@ -354,7 +360,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
-      ),      
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -366,11 +372,11 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'hs_taxonomy',
       'settings' => array(
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
-      'type' => 'options_select',
+      'type' => 'taxonomy_hs',
       'weight' => 7,
     ),
     'workbench_access_field' => 0,

@@ -40,16 +40,16 @@ function gsb_feature_academic_calendar_ct_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '10',
-        ),
-        'title' => array(
-          'weight' => '0',
-        ),
-        'path' => array(
           'weight' => '9',
         ),
-        'workbench_access' => array(
+        'title' => array(
+          'weight' => '1',
+        ),
+        'path' => array(
           'weight' => '8',
+        ),
+        'workbench_access' => array(
+          'weight' => '0',
         ),
         'redirect' => array(
           'weight' => '10',
