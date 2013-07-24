@@ -161,6 +161,12 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'type' => 'list_default',
         'weight' => 6,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -354,7 +360,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
-      ),      
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -370,7 +376,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
       'settings' => array(
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
-      'type' => 'options_select',
+      'type' => 'options_buttons',
       'weight' => 7,
     ),
     'workbench_access_field' => 0,
