@@ -28,12 +28,9 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
       ),
       'event_listing' => array(
         'label' => 'hidden',
-        'module' => 'link',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'link_default',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'featured' => array(
         'label' => 'above',
@@ -113,12 +110,9 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
       ),
       'event_listing' => array(
         'label' => 'hidden',
-        'module' => 'list',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'list_default',
-        'weight' => 2,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'featured' => array(
         'label' => 'above',
@@ -181,12 +175,9 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
       ),
       'event_listing' => array(
         'label' => 'hidden',
-        'module' => 'list',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'list_default',
-        'weight' => 4,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'featured' => array(
         'label' => 'above',
@@ -247,7 +238,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 12,
       ),
       'featured' => array(
         'label' => 'above',
@@ -311,17 +302,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
       ),
       'event_listing' => array(
         'label' => 'hidden',
-        'module' => 'date',
-        'settings' => array(
-          'conditions' => array(),
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_repeat_rule' => 'show',
-        ),
-        'type' => 'date_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'featured' => array(
@@ -393,12 +375,9 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
       ),
       'event_listing' => array(
         'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'featured' => array(
         'label' => 'above',
@@ -458,7 +437,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 10,
       ),
       'featured' => array(
         'label' => 'above',
@@ -481,9 +460,9 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'settings' => array(
       'selected_fields' => array(
         'concat_field_entity_label' => 'concat_field_entity_label',
-        'field_academic_calendar_link' => 'field_academic_calendar_link',
-        'field_academic_quarter' => 0,
-        'field_academic_year' => 0,
+        'field_academic_calendar_link' => 0,
+        'field_academic_quarter' => 'field_academic_quarter',
+        'field_academic_year' => 'field_academic_year',
         'field_event_category' => 0,
         'field_event_date' => 0,
         'field_program_unlimited' => 'field_program_unlimited',
