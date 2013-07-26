@@ -21,7 +21,7 @@ function gsb_feature_academic_calendar_ct_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'auto_entitylabel_pattern_node_academic_calendar_event';
-  $strongarm->value = '[node:field-program-single:name] - [node:field_academic_calendar_link]';
+  $strongarm->value = '[node:field_academic_calendar_link] ([node:field_program_unlimited])';
   $export['auto_entitylabel_pattern_node_academic_calendar_event'] = $strongarm;
 
   $strongarm = new stdClass();
