@@ -34,6 +34,7 @@ features[variable][] = menu_parent_academic_calendar_event
 features[variable][] = node_options_academic_calendar_event
 features[variable][] = node_preview_academic_calendar_event
 features[variable][] = node_submitted_academic_calendar_event
+features[variable][] = workbench_access_node_type_academic_calendar_event
 features_exclude[taxonomy][event_category] = event_category
 features_exclude[taxonomy][program] = program
 features_exclude[field][node-academic_calendar_event-field_program_unlimited] = node-academic_calendar_event-field_program_unlimited
