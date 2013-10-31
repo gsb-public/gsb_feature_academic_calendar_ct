@@ -170,7 +170,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the academic year for which you want the academic calendar event to appear. MSx summer academic calendar events should select the Autumn academic year.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -450,6 +450,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
   t('Event Category');
   t('Program');
   t('Quarter');
+  t('Select the academic year for which you want the academic calendar event to appear. MSx summer academic calendar events should select the Autumn academic year.');
 
   return $field_instances;
 }
