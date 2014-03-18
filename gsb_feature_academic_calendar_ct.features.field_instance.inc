@@ -91,7 +91,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 1,
+      'weight' => 2,
     ),
     'workbench_access_field' => 0,
   );
@@ -156,7 +156,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -225,7 +225,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -290,7 +290,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -372,7 +372,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 2,
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
   );
@@ -442,6 +442,46 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-academic_calendar_event-field_submit'
+  $field_instances['node-academic_calendar_event-field_submit'] = array(
+    'bundle' => 'academic_calendar_event',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => NULL,
+        'settings' => array(),
+        'type' => 'submit_field_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_submit',
+    'label' => 'Submit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'submit_field',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'submit_field',
+      'weight' => 0,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Academic year');
@@ -451,6 +491,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
   t('Program');
   t('Quarter');
   t('Select the academic year for which you want the academic calendar event to appear. MSx summer academic calendar events should select the Autumn academic year.');
+  t('Submit');
 
   return $field_instances;
 }
