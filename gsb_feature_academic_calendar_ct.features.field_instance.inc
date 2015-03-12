@@ -61,6 +61,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -68,6 +69,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'target' => 'user',
         'title' => '',
       ),
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -78,6 +81,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
       ),
       'rel_remove' => 'default',
       'title' => 'required',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 'optional',
@@ -147,6 +151,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'label' => 'Quarter',
     'required' => 1,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -216,6 +222,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'label' => 'Academic year',
     'required' => 1,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -281,6 +289,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'label' => 'Event Category',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -351,6 +361,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'label' => 'Date',
     'required' => 1,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'default_value' => 'now',
       'default_value2' => 'blank',
       'default_value_code' => '',
@@ -428,6 +440,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'label' => 'Program',
     'required' => 1,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -468,6 +482,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'label' => 'Submit',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
