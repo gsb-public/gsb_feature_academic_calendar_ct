@@ -17,7 +17,6 @@ dependencies[] = taxonomy
 datestamp = 1372862971
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
-features[field_base][] = field_academic_calendar_display
 features[field_instance][] = node-academic_calendar_event-field_academic_calendar_display
 features[field_instance][] = node-academic_calendar_event-field_academic_calendar_link
 features[field_instance][] = node-academic_calendar_event-field_academic_quarter
