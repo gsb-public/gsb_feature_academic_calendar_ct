@@ -10,7 +10,70 @@
 function gsb_feature_academic_calendar_ct_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-academic_calendar_event-field_academic_calendar_link'
+  // Exported field_instance:
+  // 'node-academic_calendar_event-field_academic_calendar_display'
+  $field_instances['node-academic_calendar_event-field_academic_calendar_display'] = array(
+    'bundle' => 'academic_calendar_event',
+    'custom_add_another' => '',
+    'custom_remove' => '',
+    'default_value' => array(
+      0 => array(
+        'tid' => 31081,
+      ),
+      1 => array(
+        'tid' => 31086,
+      ),
+      2 => array(
+        'tid' => 31091,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_academic_calendar_display',
+    'label' => 'Academic Calendar Display',
+    'required' => 0,
+    'settings' => array(
+      'checkall' => array(
+        'checkall' => 1,
+        'checkall-toggle' => 1,
+      ),
+      'custom_add_another' => '',
+      'custom_remove' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'checkall' => FALSE,
+      ),
+      'type' => 'options_buttons',
+      'weight' => 6,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance:
+  // 'node-academic_calendar_event-field_academic_calendar_link'
   $field_instances['node-academic_calendar_event-field_academic_calendar_link'] = array(
     'bundle' => 'academic_calendar_event',
     'default_value' => NULL,
@@ -484,6 +547,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Academic Calendar Display');
   t('Academic year');
   t('Date');
   t('Description');
