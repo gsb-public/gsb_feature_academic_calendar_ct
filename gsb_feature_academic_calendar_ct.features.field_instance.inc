@@ -54,7 +54,9 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'settings' => array(
       'checkall' => array(
         'checkall' => 1,
-        'checkall-toggle' => 1,
+        'checkall-check-all' => 1,
+        'checkall-toggle' => 0,
+        'checkall-uncheck-all' => 1,
       ),
       'custom_add_another' => '',
       'custom_remove' => '',
