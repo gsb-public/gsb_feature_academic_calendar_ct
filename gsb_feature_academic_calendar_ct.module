@@ -37,5 +37,7 @@ function gsb_feature_academic_calendar_ct_date_popup_process_alter(&$element, &$
 function gsb_feature_academic_calendar_ct_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'academic_calendar_event_node_form' && arg(1) == 'add') {
     $form['field_academic_year']['und']['#default_value'] = variable_get('gsb_academic_year');
+    $checkbox_values = array_keys($form['field_academic_calendar_display']['und']['#options']);
+    $form['field_academic_calendar_display']['und']['#default_value'] = $checkbox_values;
   }
 }
