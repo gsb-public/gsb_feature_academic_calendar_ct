@@ -126,6 +126,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -133,6 +134,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'target' => 'user',
         'title' => '',
       ),
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -143,6 +146,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
       ),
       'rel_remove' => 'default',
       'title' => 'required',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 'optional',
@@ -161,7 +165,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-academic_calendar_event-field_academic_quarter'
+  // Exported field_instance:
+  // 'node-academic_calendar_event-field_academic_quarter'
   $field_instances['node-academic_calendar_event-field_academic_quarter'] = array(
     'bundle' => 'academic_calendar_event',
     'default_value' => NULL,
@@ -212,6 +217,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'label' => 'Quarter',
     'required' => 1,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -281,6 +288,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'label' => 'Academic year',
     'required' => 1,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -295,7 +304,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-academic_calendar_event-field_event_category'
+  // Exported field_instance:
+  // 'node-academic_calendar_event-field_event_category'
   $field_instances['node-academic_calendar_event-field_event_category'] = array(
     'bundle' => 'academic_calendar_event',
     'default_value' => NULL,
@@ -346,6 +356,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'label' => 'Event Category',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -416,6 +428,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'label' => 'Date',
     'required' => 1,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'default_value' => 'now',
       'default_value2' => 'blank',
       'default_value_code' => '',
@@ -438,71 +452,6 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
       ),
       'type' => 'date_popup',
       'weight' => 3,
-    ),
-    'workbench_access_field' => 0,
-  );
-
-  // Exported field_instance: 'node-academic_calendar_event-field_program_unlimited'
-  $field_instances['node-academic_calendar_event-field_program_unlimited'] = array(
-    'bundle' => 'academic_calendar_event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'conditions' => array(),
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'tiny' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_program_unlimited',
-    'label' => 'Program',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-      ),
-      'type' => 'options_buttons',
-      'weight' => 7,
     ),
     'workbench_access_field' => 0,
   );
@@ -533,6 +482,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'label' => 'Submit',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -554,7 +505,6 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
   t('Date');
   t('Description');
   t('Event Category');
-  t('Program');
   t('Quarter');
   t('Select the academic year for which you want the academic calendar event to appear. MSx summer academic calendar events should select the Autumn academic year.');
   t('Submit');
