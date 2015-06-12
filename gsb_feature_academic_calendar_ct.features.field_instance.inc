@@ -78,6 +78,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
   // 'node-academic_calendar_event-field_academic_calendar_link'
   $field_instances['node-academic_calendar_event-field_academic_calendar_link'] = array(
     'bundle' => 'academic_calendar_event',
+    'custom_add_another' => '',
+    'custom_remove' => '',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -124,11 +126,12 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_academic_calendar_link',
     'label' => 'Description',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
+        'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
         'target' => 'user',
@@ -146,7 +149,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
       ),
       'rel_remove' => 'default',
       'title' => 'required',
-      'title_label_use_field_label' => FALSE,
+      'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 'optional',
@@ -156,9 +159,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'link',
-      'settings' => array(
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-      ),
+      'settings' => array(),
       'type' => 'link_field',
       'weight' => 2,
     ),
