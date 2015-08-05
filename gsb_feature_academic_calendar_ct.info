@@ -1,7 +1,7 @@
 name = GSB Feature Academic Calendar Content Type
 core = 7.x
 package = GSB
-version = 7.x-3.0
+version = 7.x-5.03
 project = gsb_feature_academic_calendar_ct
 dependencies[] = ctools
 dependencies[] = date
@@ -25,7 +25,6 @@ features[field_instance][] = node-academic_calendar_event-field_academic_calenda
 features[field_instance][] = node-academic_calendar_event-field_academic_calendar_link
 features[field_instance][] = node-academic_calendar_event-field_academic_quarter
 features[field_instance][] = node-academic_calendar_event-field_academic_year
-features[field_instance][] = node-academic_calendar_event-field_event_category
 features[field_instance][] = node-academic_calendar_event-field_event_date
 features[field_instance][] = node-academic_calendar_event-field_submit
 features[node][] = academic_calendar_event

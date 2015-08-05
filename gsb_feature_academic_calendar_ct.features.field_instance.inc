@@ -299,70 +299,6 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance:
-  // 'node-academic_calendar_event-field_event_category'
-  $field_instances['node-academic_calendar_event-field_event_category'] = array(
-    'bundle' => 'academic_calendar_event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'main_list' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'tiny' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_event_category',
-    'label' => 'Event Category',
-    'required' => 0,
-    'settings' => array(
-      'custom_add_another' => '',
-      'custom_remove' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-      ),
-      'type' => 'options_select',
-      'weight' => 6,
-    ),
-    'workbench_access_field' => 0,
-  );
-
   // Exported field_instance: 'node-academic_calendar_event-field_event_date'
   $field_instances['node-academic_calendar_event-field_event_date'] = array(
     'bundle' => 'academic_calendar_event',
@@ -496,7 +432,6 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
   t('Academic year');
   t('Date');
   t('Description');
-  t('Event Category');
   t('Quarter');
   t('Select the academic year for which you want the academic calendar event to appear. MSx summer academic calendar events should select the Autumn academic year.');
   t('Submit');

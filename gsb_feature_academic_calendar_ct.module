@@ -6,18 +6,6 @@
 
 include_once 'gsb_feature_academic_calendar_ct.features.inc';
 
-/**
- * Implements hook_form_FORM_ID_alter() for academic_calendar_event_node_form().
- */
-function gsb_feature_academic_calendar_ct_form_academic_calendar_event_node_form_alter(&$form, &$form_state, $form_id) {
-  $term = taxonomy_get_term_by_name('Academic Calendar','event_category');
-  $tid = array_keys($term)[0];
-  if (isset($form['field_event_category'])) {
-    $langcode = $form['field_event_category']['#language'];
-    $form['field_event_category'][$langcode]['#value'] = $tid;
-    $form['field_event_category'][$langcode]['#type'] = 'hidden';
-  }
-}
 
 /**
  * Implements hook_date_popup_process_alter().
