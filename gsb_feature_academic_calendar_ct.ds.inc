@@ -17,14 +17,8 @@ function gsb_feature_academic_calendar_ct_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'academic_calendar_event';
   $ds_fieldsetting->view_mode = 'main_list';
   $ds_fieldsetting->settings = array(
-    'title' => array(
-      'weight' => '1',
-      'label' => 'hidden',
-      'format' => 'default',
+    'field_academic_calendar_link' => array(
       'formatter_settings' => array(
-        'link' => '1',
-        'wrapper' => 'h3',
-        'class' => '',
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
@@ -34,7 +28,6 @@ function gsb_feature_academic_calendar_ct_ds_field_settings_info() {
           'ow-at' => '',
           'ow-def-at' => FALSE,
         ),
-        'conditions' => array(),
       ),
     ),
   );
@@ -59,11 +52,11 @@ function gsb_feature_academic_calendar_ct_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'title',
+        0 => 'field_academic_calendar_link',
       ),
     ),
     'fields' => array(
-      'title' => 'ds_content',
+      'field_academic_calendar_link' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
