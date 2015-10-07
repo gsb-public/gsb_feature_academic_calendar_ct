@@ -318,6 +318,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
@@ -382,6 +383,116 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance:
+  // 'node-academic_calendar_event-field_event_location'
+  $field_instances['node-academic_calendar_event-field_event_location'] = array(
+    'bundle' => 'academic_calendar_event',
+    'custom_add_another' => '',
+    'custom_remove' => '',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
+      'main_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_event_location',
+    'label' => 'Event Location',
+    'required' => 0,
+    'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 16,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-academic_calendar_event-field_search_field'
+  $field_instances['node-academic_calendar_event-field_search_field'] = array(
+    'bundle' => 'academic_calendar_event',
+    'custom_add_another' => '',
+    'custom_remove' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'concat_field',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'concat_field_blank',
+        'weight' => 10,
+      ),
+      'main_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_search_field',
+    'label' => 'Search field',
+    'required' => 0,
+    'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
+      'selected_fields' => array(
+        'concat_field_entity_label' => 'concat_field_entity_label',
+        'field_academic_calendar_display' => 0,
+        'field_academic_calendar_link' => 0,
+        'field_academic_quarter' => 'field_academic_quarter',
+        'field_academic_year' => 'field_academic_year',
+        'field_event_date' => 0,
+        'field_event_location' => 'field_event_location',
+        'field_submit' => 0,
+        'field_target_audience' => 'field_target_audience',
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'concat_field',
+      'settings' => array(),
+      'type' => 'concat_field_default',
+      'weight' => 12,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-academic_calendar_event-field_submit'
   $field_instances['node-academic_calendar_event-field_submit'] = array(
     'bundle' => 'academic_calendar_event',
@@ -429,13 +540,92 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance:
+  // 'node-academic_calendar_event-field_target_audience'
+  $field_instances['node-academic_calendar_event-field_target_audience'] = array(
+    'bundle' => 'academic_calendar_event',
+    'custom_add_another' => '',
+    'custom_remove' => '',
+    'default_value' => array(
+      0 => array(
+        'tid' => 12231,
+      ),
+      1 => array(
+        'tid' => 12236,
+      ),
+      2 => array(
+        'tid' => 12246,
+      ),
+      3 => array(
+        'tid' => 12251,
+      ),
+      4 => array(
+        'tid' => 12226,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 11,
+      ),
+      'main_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_target_audience',
+    'label' => 'Open to',
+    'required' => 0,
+    'settings' => array(
+      'checkall' => array(
+        'checkall' => 1,
+        'checkall-check-all' => 0,
+        'checkall-toggle' => 0,
+        'checkall-uncheck-all' => 0,
+      ),
+      'custom_add_another' => '',
+      'custom_remove' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'checkall' => FALSE,
+      ),
+      'type' => 'options_buttons',
+      'weight' => 14,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Academic Calendar Display');
   t('Academic year');
   t('Date');
   t('Description');
+  t('Event Location');
+  t('Open to');
   t('Quarter');
+  t('Search field');
   t('Select the academic year for which you want the academic calendar event to appear. MSx summer academic calendar events should select the Autumn academic year.');
   t('Submit');
 

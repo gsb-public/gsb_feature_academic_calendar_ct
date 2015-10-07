@@ -124,6 +124,9 @@ function gsb_feature_academic_calendar_ct_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'event_contacts' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

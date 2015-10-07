@@ -22,14 +22,67 @@ function gsb_feature_academic_calendar_ct_date_popup_process_alter(&$element, &$
   }
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ * @param $form_id
+ */
 function gsb_feature_academic_calendar_ct_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'academic_calendar_event_node_form' && arg(1) == 'add') {
-    //$form['field_academic_year']['und']['#default_value'] = variable_get('gsb_academic_year');
-    $form['field_academic_year']['und']['#default_value'] = Date('Y');
-    $checkbox_values = array_keys($form['field_academic_calendar_display']['und']['#options']);
-    $form['field_academic_calendar_display']['und']['#default_value'] = $checkbox_values;
+
+  if ($form_id == 'academic_calendar_event_node_form') {
+    if (arg(1) == 'add') {
+      $form['field_academic_year']['und']['#default_value'] = Date('Y');
+      $checkbox_values = array_keys($form['field_academic_calendar_display']['und']['#options']);
+      $form['field_academic_calendar_display']['und']['#default_value'] = $checkbox_values;
+    }
+
+    $form['field_target_audience']['#access'] = FALSE;
+    $form['field_event_location']['und']['#max_delta'] = 2;
+    $form_state['field']['field_event_location']['und']['items_count'] = 3;
+    $form['field_event_location']['und'][0]['#title'] = 'Event Location (value 1)';
+    $form['field_event_location']['und'][0]['field_event_location_type']['und']['#default_value'] = 'On campus';
+    $form['field_event_location']['und'][0]['field_address']['und'][0]['street_block']['thoroughfare']['#required']= FALSE;
+    $form['field_event_location']['und'][0]['field_address']['und'][0]['locality_block']['locality']['#required'] = FALSE;
+    $form['field_event_location']['und'][0]['field_address']['und'][0]['locality_block']['administrative_area']['#required']= FALSE;
+    $form['field_event_location']['und'][0]['field_address']['und'][0]['locality_block']['postal_code']['#required'] = FALSE;
+    $form_state['field']['field_event_location']['und']['entity'][0]->field_event_location_type['und'][0]['value'] = 'On campus';
+    $form['field_event_location']['und'][1] = $form['field_event_location']['und'][0];
+    $form['field_event_location']['und'][1]['#delta'] = 1;
+    $form['field_event_location']['und'][1]['#weight'] = 1;
+    $form['field_event_location']['und'][1]['#parents'][2] = 1;
+    $form['field_event_location']['und'][1]['#title'] = 'Event Location (value 2)';
+    $form['field_event_location']['und'][1]['field_event_location_type']['und']['#field_parents'][2] = 1;
+    $form['field_event_location']['und'][1]['field_address']['und'][0]['#field_parents'][2] = 1;
+    $form['field_event_location']['und'][1]['field_link_map']['und'][0]['#field_parents'][2] = 1;
+    $form['field_event_location']['und'][1]['field_event_location_type']['und']['#default_value'] = 'Off campus';
+    $form['field_event_location']['und'][1]['field_address']['und'][0]['street_block']['thoroughfare']['#required']= FALSE;
+    $form['field_event_location']['und'][1]['field_address']['und'][0]['locality_block']['locality']['#required'] = FALSE;
+    $form['field_event_location']['und'][1]['field_address']['und'][0]['locality_block']['administrative_area']['#required']= FALSE;
+    $form['field_event_location']['und'][1]['field_address']['und'][0]['locality_block']['postal_code']['#required'] = FALSE;
+    $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_event_location'));
+    $form_state['field']['field_event_location']['und']['entity'][1] = $field_collection_item ;
+    $form_state['field']['field_event_location']['und']['entity'][1]->field_event_location_type['und'][0]['value'] = 'Off campus';
+    $form['field_event_location']['und'][2] = $form['field_event_location']['und'][0];
+    $form['field_event_location']['und'][2]['#delta'] = 2;
+    $form['field_event_location']['und'][2]['#weight'] = 2;
+    $form['field_event_location']['und'][2]['#parents'][2] = 2;
+    $form['field_event_location']['und'][2]['#title'] = 'Event Location (value 3)';
+    $form['field_event_location']['und'][2]['field_event_location_type']['und']['#field_parents'][2] = 2;
+    $form['field_event_location']['und'][2]['field_address']['und'][0]['#field_parents'][2] = 2;
+    $form['field_event_location']['und'][2]['field_link_map']['und'][0]['#field_parents'][2] = 2;
+    $form['field_event_location']['und'][2]['field_event_location_type']['und']['#default_value'] = 'Online';
+    $form['field_event_location']['und'][2]['field_address']['und'][0]['street_block']['thoroughfare']['#required']= FALSE;
+    $form['field_event_location']['und'][2]['field_address']['und'][0]['locality_block']['locality']['#required'] = FALSE;
+    $form['field_event_location']['und'][2]['field_address']['und'][0]['locality_block']['administrative_area']['#required']= FALSE;
+    $form['field_event_location']['und'][2]['field_address']['und'][0]['locality_block']['postal_code']['#required'] = FALSE;
+    $field_collection_item1 = entity_create('field_collection_item', array('field_name' => 'field_event_location'));
+    $form_state['field']['field_event_location']['und']['entity'][2] = $field_collection_item1 ;
+    $form_state['field']['field_event_location']['und']['entity'][2]->field_event_location_type['und'][0]['value'] = 'Online';
+    $form['field_event_location']['#access'] = FALSE;
   }
-}
+  }
+
+
 
 /**
  * Gets the allowed academic years.
