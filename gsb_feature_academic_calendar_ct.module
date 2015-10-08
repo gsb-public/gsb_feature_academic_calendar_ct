@@ -35,7 +35,7 @@ function gsb_feature_academic_calendar_ct_form_alter(&$form, &$form_state, $form
       $checkbox_values = array_keys($form['field_academic_calendar_display']['und']['#options']);
       $form['field_academic_calendar_display']['und']['#default_value'] = $checkbox_values;
     }
-
+    $form['field_target_audience']['und']['#default_value'] = array('12231', '12236','12246', '12251', '12226');
     $form['field_target_audience']['#access'] = FALSE;
     $form['field_event_location']['und']['#max_delta'] = 2;
     $form_state['field']['field_event_location']['und']['items_count'] = 3;
