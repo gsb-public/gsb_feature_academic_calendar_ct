@@ -97,7 +97,7 @@ function gsb_feature_academic_calendar_ct_get_allowed_values($year = '') {
     // Either ensure the year is an integer, or load the current year.
     //$year = $year ? (int) $year : gsb_academic_year_get_value();
     $year = Date('Y');
-    return drupal_map_assoc(range(2014, $year + 1));
+    return drupal_map_assoc(range($year - 2, $year + 2));
 }
 
 /**
