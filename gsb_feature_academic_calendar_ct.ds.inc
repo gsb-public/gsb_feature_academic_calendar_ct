@@ -59,10 +59,12 @@ function gsb_feature_academic_calendar_ct_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_academic_calendar_link',
+        0 => 'field_event_date',
+        1 => 'field_academic_calendar_link',
       ),
     ),
     'fields' => array(
+      'field_event_date' => 'ds_content',
       'field_academic_calendar_link' => 'ds_content',
     ),
     'classes' => array(),
@@ -74,6 +76,7 @@ function gsb_feature_academic_calendar_ct_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['node|academic_calendar_event|main_list'] = $ds_layout;
 

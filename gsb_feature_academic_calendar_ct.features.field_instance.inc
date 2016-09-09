@@ -11,7 +11,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'node-academic_calendar_event-field_academic_calendar_display'
+  // 'node-academic_calendar_event-field_academic_calendar_display'.
   $field_instances['node-academic_calendar_event-field_academic_calendar_display'] = array(
     'bundle' => 'academic_calendar_event',
     'custom_add_another' => '',
@@ -43,7 +43,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -81,7 +81,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-academic_calendar_event-field_academic_calendar_link'
+  // 'node-academic_calendar_event-field_academic_calendar_link'.
   $field_instances['node-academic_calendar_event-field_academic_calendar_link'] = array(
     'bundle' => 'academic_calendar_event',
     'custom_add_another' => '',
@@ -112,7 +112,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
           'conditions' => array(),
         ),
         'type' => 'link_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -172,7 +172,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-academic_calendar_event-field_academic_quarter'
+  // 'node-academic_calendar_event-field_academic_quarter'.
   $field_instances['node-academic_calendar_event-field_academic_quarter'] = array(
     'bundle' => 'academic_calendar_event',
     'default_value' => NULL,
@@ -198,7 +198,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -235,7 +235,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-academic_calendar_event-field_academic_year'
+  // Exported field_instance:
+  // 'node-academic_calendar_event-field_academic_year'.
   $field_instances['node-academic_calendar_event-field_academic_year'] = array(
     'bundle' => 'academic_calendar_event',
     'default_value' => array(
@@ -265,7 +266,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -302,7 +303,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-academic_calendar_event-field_event_date'
+  // Exported field_instance: 'node-academic_calendar_event-field_event_date'.
   $field_instances['node-academic_calendar_event-field_event_date'] = array(
     'bundle' => 'academic_calendar_event',
     'deleted' => 0,
@@ -331,10 +332,17 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'weight' => 0,
       ),
       'main_list' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
+        'label' => 'hidden',
+        'module' => 'gsb_field_formatter',
+        'settings' => array(
+          'conditions' => array(
+            0 => array(
+              'condition' => '',
+            ),
+          ),
+        ),
+        'type' => 'gsb_field_formatter_split_date_format',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -384,7 +392,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-academic_calendar_event-field_event_location'
+  // 'node-academic_calendar_event-field_event_location'.
   $field_instances['node-academic_calendar_event-field_event_location'] = array(
     'bundle' => 'academic_calendar_event',
     'custom_add_another' => '',
@@ -403,7 +411,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -432,7 +440,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-academic_calendar_event-field_search_field'
+  // Exported field_instance: 'node-academic_calendar_event-field_search_field'.
   $field_instances['node-academic_calendar_event-field_search_field'] = array(
     'bundle' => 'academic_calendar_event',
     'custom_add_another' => '',
@@ -453,7 +461,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -493,7 +501,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-academic_calendar_event-field_submit'
+  // Exported field_instance: 'node-academic_calendar_event-field_submit'.
   $field_instances['node-academic_calendar_event-field_submit'] = array(
     'bundle' => 'academic_calendar_event',
     'deleted' => 0,
@@ -509,7 +517,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -541,7 +549,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-academic_calendar_event-field_target_audience'
+  // 'node-academic_calendar_event-field_target_audience'.
   $field_instances['node-academic_calendar_event-field_target_audience'] = array(
     'bundle' => 'academic_calendar_event',
     'custom_add_another' => '',
@@ -579,7 +587,7 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
