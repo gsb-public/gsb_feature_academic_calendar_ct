@@ -306,6 +306,8 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
   // Exported field_instance: 'node-academic_calendar_event-field_event_date'.
   $field_instances['node-academic_calendar_event-field_event_date'] = array(
     'bundle' => 'academic_calendar_event',
+    'custom_add_another' => '',
+    'custom_remove' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -380,10 +382,10 @@ function gsb_feature_academic_calendar_ct_field_default_field_instances() {
         'input_format' => 'Y-m-d H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'repeat_collapsed' => 0,
+        'no_fieldset' => 0,
+        'repeat_collapsed' => 1,
         'text_parts' => array(),
-        'year_range' => '-3:+3',
+        'year_range' => '-3:+5',
       ),
       'type' => 'date_popup',
       'weight' => 3,
